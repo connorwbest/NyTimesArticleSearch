@@ -22,9 +22,10 @@ $('#search').on('click', function () {
 
             var articleDiv = $('<div>');
 
-            articleDiv.html(result.response.docs[i]);
+            articleDiv.html(JSON.stringify(result.response.docs[i].headline.main));
 
             $('#top-articles').prepend(articleDiv);
+            console.log(result.response.docs[i].headline.main);
             
         }
 
