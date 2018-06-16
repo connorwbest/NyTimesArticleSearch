@@ -5,57 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New York Times Article Search</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    
     <div class="container">
+        <!-- header start  -->
         <div class="row">
             <div class="col-md-12">
                     
-                    <div class="jumbotron">
-                            <h1 class="display-3 text-center">New York Times Search</h1>
-                          </div>
+                <div class="jumbotron">
+                    <h1 class="display-3 text-center">New York Times Search</h1>
+                </div>
                     
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
+        <!-- header end  -->
+
+        <!-- main body start -->
+        <div class="row main-body">
+                <div class="card">
+                        <div class="card-header">Search Parameters</div>
+                <div class="col-md-12">
                 <form>
-                        <div class="form-group">
-                            <label for="search-term">Search Term:</label>
-                            <input type="search" class="form-control" id="keyword">
-                           
-                        </div>
-                        <div class="form-group">
-                                <label for="records-number">Number of Records to Retrieve:</label>
-                                <select class="form-control" id="records">
-                                  <option>1</option>
-                                  <option>5</option>
-                                  <option>10</option>
-                                </select>
-                               
-                            </div>
-                        <div class="form-group">
-                                <label for="start-year">Start Year (Optional):</label>
-                                <input type="search" class="form-control" id="start-year">
-                               
-                        </div>
-                        <div class="form-group">
-                                <label for="end-year">End Year (Optional):</label>
-                                <input type="search" class="form-control" id="end-year">
-                               
-                        </div>
+                    <div class="form-group">
+                        <label for="search-term">Search Term:</label>
+                        <input type="search" class="form-control" id="keyword">
                         
-                        <button type="submit" class="btn btn-primary">Search</button>
-                        <button type="submit" class="btn btn-primary">Clear Results</button>
-                        </form>
+                    </div>
+                    <div class="form-group">
+                            <label for="records-number">Number of Records to Retrieve:</label>
+                            <select class="form-control" id="records">
+                                <option>1</option>
+                                <option>5</option>
+                                <option>10</option>
+                            </select>
+                            
+                        </div>
+                    <div class="form-group">
+                            <label for="start-year">Start Year (Optional):</label>
+                            <input type="search" class="form-control" id="start-year">
+                            
+                    </div>
+                    <div class="form-group">
+                            <label for="end-year">End Year (Optional):</label>
+                            <input type="search" class="form-control" id="end-year">
+                            
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn btn-primary">Clear Results</button>
+                </form>
+            </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12" id="top-articles">Top Articles</div>
+         <!-- main body end -->
+
+        <!-- article dump start -->
+        <div class="row footer">
+            <div class="card">
+            <div class="card-header">Top Articles</div>
+            
+            <div class="col-md-12" id="top-articles"></div>
+            </div>
         </div>
 
-
+         <!-- article dump end -->
     </div>
 </body>
 </html>

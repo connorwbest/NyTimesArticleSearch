@@ -1,0 +1,28 @@
+.jumbotron {
+    background-color: #213258;
+    color: white;
+}
+
+.card-header {
+    background-color: #213258;
+    color: white;
+    height: 30px;
+    padding: 5px;
+}
+
+.main-body {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 25px;
+}
+
+.footer {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    overflow: auto;
+}
