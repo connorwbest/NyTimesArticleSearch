@@ -1,14 +1,19 @@
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-url += '?' + $.param({
+var paramObject = {
     'api-key': "6bf427aa067d43458657331022771c83",
-    'q': "Bill Clinton",
-    'begin_date': "20000101",
+    'q': "",
+    'begin_date': "",
     'end_date': "20180101",
     'sort': "newest"
-});
+}
+url += '?' + $.param(paramObject);
 $('#search').on('click', function () {
 
     event.preventDefault();
+
+    paramObject['q'] = $('#keyword').val();
+    paramObject['begin_date'] = $("#start-date").val();
+    paramObject['end_date'] = $('#end-date').val(); 
 
     $.ajax({
         url: url,
