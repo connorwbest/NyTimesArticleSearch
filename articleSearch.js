@@ -6,15 +6,16 @@ var paramObject = {
     'end_date': "20180101",
     'sort': "newest"
 }
-url += '?' + $.param(paramObject);
-$('#search').on('click', function () {
 
+$('#search').on('click', function () {
+   
     event.preventDefault();
 
     paramObject['q'] = $('#keyword').val();
     paramObject['begin_date'] = $("#start-date").val();
     paramObject['end_date'] = $('#end-date').val(); 
-
+    url += '?' + $.param(paramObject);
+    
     $.ajax({
         url: url,
         method: 'GET',
@@ -35,7 +36,7 @@ $('#search').on('click', function () {
         }
 
 
-    })
+    });
     
 
-})
+});
